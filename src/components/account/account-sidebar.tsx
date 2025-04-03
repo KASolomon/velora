@@ -31,7 +31,7 @@ export function AccountSidebar() {
     },
     {
       title: "Wishlist",
-      href: "/wishlist",
+      href: "/account/wishlist",
       icon: Heart,
     },
     {

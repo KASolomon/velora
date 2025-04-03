@@ -33,21 +33,21 @@ export default function Home() {
           <div className="container relative z-10 flex h-full flex-col justify-center">
             <div className="max-w-xl space-y-4">
               <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
-                Elevate Your <span className="text-gold">Everyday</span>
+                Elevate Your <span className="text-[#B8860B]">Everyday</span>
               </h1>
               <p className="text-xl text-white/90">
                 Discover premium products curated for the discerning customer. From gourmet groceries to cutting-edge
                 electronics.
               </p>
               <div className="flex gap-4">
-                <Button size="lg" className="rounded-full bg-gold hover:bg-gold/90 text-gold-foreground">
+                <Button size="lg" className="rounded-full bg-[#B8860B] hover:bg-[#B8860B]/90 text-white">
                   Shop Now
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
-                  className="rounded-full border-white/30 bg-black/40 text-white hover:bg-black/60 hover:border-gold/50"
+                  className="rounded-full border-white/30 bg-black/40 text-white hover:bg-black/60 hover:border-[#B8860B]/50"
                 >
                   View Collections
                 </Button>
@@ -60,13 +60,13 @@ export default function Home() {
       {/* Categories Section */}
       <section className="py-16">
         <div className="container">
-          <h2 className="text-3xl font-bold tracking-tight mb-8 text-secondary">
-            Shop by <span className="text-gold">Category</span>
+          <h2 className="text-3xl font-bold tracking-tight mb-8 text-gray-800">
+            Shop by <span className="text-[#B8860B]">Category</span>
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {categories.map((category) => (
               <Link key={category.name} href={category.path} className="group flex flex-col items-center text-center">
-                <div className="mb-4 overflow-hidden rounded-full bg-muted p-4">
+                <div className="mb-4 overflow-hidden rounded-full bg-gray-100 p-4">
                   <Image
                     src={category.image || "/placeholder.svg"}
                     alt={category.name}
@@ -83,13 +83,13 @@ export default function Home() {
       </section>
 
       {/* Featured Products */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-16 bg-gray-50/30">
         <div className="container">
           <div className="flex items-center justify-between mb-8">
-            <h2 className="text-3xl font-bold tracking-tight text-secondary">
-              Featured <span className="text-gold">Products</span>
+            <h2 className="text-3xl font-bold tracking-tight text-gray-800">
+              Featured <span className="text-[#B8860B]">Products</span>
             </h2>
-            <Link href="/category/electronics" className="flex items-center text-sm font-medium text-gold">
+            <Link href="/category/electronics" className="flex items-center text-sm font-medium text-[#B8860B]">
               View All <ChevronRight className="ml-1 h-4 w-4" />
             </Link>
           </div>
@@ -122,7 +122,7 @@ export default function Home() {
                     <p className="text-lg text-white/90">
                       Discover our latest collection of premium products, crafted for excellence.
                     </p>
-                    <Button size="lg" className="rounded-full bg-gold hover:bg-gold/90 text-gold-foreground">
+                    <Button size="lg" className="rounded-full bg-[#B8860B] hover:bg-[#B8860B]/90 text-white">
                       Explore Collection
                     </Button>
                   </div>
@@ -134,11 +134,11 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-16 bg-gray-50/30">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="flex flex-col items-center text-center p-6">
-              <div className="mb-4 rounded-full bg-gold/10 p-3">
+              <div className="mb-4 rounded-full bg-[#B8860B]/10 p-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -149,17 +149,17 @@ export default function Home() {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="h-6 w-6 text-gold"
+                  className="h-6 w-6 text-[#B8860B]"
                 >
                   <path d="M5 12h14" />
                   <path d="M12 5v14" />
                 </svg>
               </div>
               <h3 className="text-xl font-semibold mb-2">Free Shipping</h3>
-              <p className="text-muted-foreground">On all orders over $50. International shipping available.</p>
+              <p className="text-gray-500">On all orders over $50. International shipping available.</p>
             </div>
             <div className="flex flex-col items-center text-center p-6">
-              <div className="mb-4 rounded-full bg-gold/10 p-3">
+              <div className="mb-4 rounded-full bg-[#B8860B]/10 p-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -170,17 +170,17 @@ export default function Home() {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="h-6 w-6 text-gold"
+                  className="h-6 w-6 text-[#B8860B]"
                 >
                   <path d="M5 12h14" />
                   <path d="M12 5v14" />
                 </svg>
               </div>
               <h3 className="text-xl font-semibold mb-2">Easy Returns</h3>
-              <p className="text-muted-foreground">30-day return policy for a hassle-free shopping experience.</p>
+              <p className="text-gray-500">30-day return policy for a hassle-free shopping experience.</p>
             </div>
             <div className="flex flex-col items-center text-center p-6">
-              <div className="mb-4 rounded-full bg-gold/10 p-3">
+              <div className="mb-4 rounded-full bg-[#B8860B]/10 p-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -191,14 +191,14 @@ export default function Home() {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="h-6 w-6 text-gold"
+                  className="h-6 w-6 text-[#B8860B]"
                 >
                   <path d="M5 12h14" />
                   <path d="M12 5v14" />
                 </svg>
               </div>
               <h3 className="text-xl font-semibold mb-2">Secure Payment</h3>
-              <p className="text-muted-foreground">Multiple secure payment options for your convenience.</p>
+              <p className="text-gray-500">Multiple secure payment options for your convenience.</p>
             </div>
           </div>
         </div>

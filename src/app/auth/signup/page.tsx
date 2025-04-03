@@ -1,31 +1,21 @@
-"use client";
+"use client"
 
-import { useState } from "react";
-import Link from "next/link";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { Eye, EyeOff } from "lucide-react";
+import { useState } from "react"
+import Link from "next/link"
+import { zodResolver } from "@hookform/resolvers/zod"
+import { useForm } from "react-hook-form"
+import { Eye, EyeOff } from "lucide-react"
 
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Checkbox } from "@/components/ui/checkbox";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
-import { Layout } from "@/components/layout/layout";
-import {
-  signupFormSchema,
-  type SignupFormValues,
-} from "@/lib/validations/auth";
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Checkbox } from "@/components/ui/checkbox"
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
+import { Layout } from "@/components/layout/layout"
+import { signupFormSchema, type SignupFormValues } from "@/lib/validations/auth"
 
 export default function SignupPage() {
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [showPassword, setShowPassword] = useState(false)
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false)
 
   const form = useForm<SignupFormValues>({
     resolver: zodResolver(signupFormSchema),
@@ -37,10 +27,10 @@ export default function SignupPage() {
       confirmPassword: "",
       terms: false,
     },
-  });
+  })
 
   function onSubmit(data: SignupFormValues) {
-    console.log(data);
+    console.log(data)
     // Here you would typically register the user
   }
 
@@ -49,12 +39,10 @@ export default function SignupPage() {
       <div className="container py-16 max-w-md mx-auto">
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold">Create an Account</h1>
-          <p className="text-muted-foreground mt-2">
-            Join Velora for a premium shopping experience
-          </p>
+          <p className="text-muted-foreground mt-2">Join Velora for a premium shopping experience</p>
         </div>
 
-        <div className="rounded-lg border bg-card p-6 shadow-xs">
+        <div className="rounded-lg border bg-card p-6 shadow-sm">
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
               <div className="grid grid-cols-2 gap-4">
@@ -106,11 +94,7 @@ export default function SignupPage() {
                     <FormLabel>Password</FormLabel>
                     <FormControl>
                       <div className="relative">
-                        <Input
-                          type={showPassword ? "text" : "password"}
-                          placeholder="Create a password"
-                          {...field}
-                        />
+                        <Input type={showPassword ? "text" : "password"} placeholder="Create a password" {...field} />
                         <Button
                           type="button"
                           variant="ghost"
@@ -123,9 +107,7 @@ export default function SignupPage() {
                           ) : (
                             <Eye className="h-4 w-4 text-muted-foreground" />
                           )}
-                          <span className="sr-only">
-                            {showPassword ? "Hide password" : "Show password"}
-                          </span>
+                          <span className="sr-only">{showPassword ? "Hide password" : "Show password"}</span>
                         </Button>
                       </div>
                     </FormControl>
@@ -151,20 +133,14 @@ export default function SignupPage() {
                           variant="ghost"
                           size="sm"
                           className="absolute right-0 top-0 h-full px-3 py-2 hover:bg-transparent"
-                          onClick={() =>
-                            setShowConfirmPassword(!showConfirmPassword)
-                          }
+                          onClick={() => setShowConfirmPassword(!showConfirmPassword)}
                         >
                           {showConfirmPassword ? (
                             <EyeOff className="h-4 w-4 text-muted-foreground" />
                           ) : (
                             <Eye className="h-4 w-4 text-muted-foreground" />
                           )}
-                          <span className="sr-only">
-                            {showConfirmPassword
-                              ? "Hide password"
-                              : "Show password"}
-                          </span>
+                          <span className="sr-only">{showConfirmPassword ? "Hide password" : "Show password"}</span>
                         </Button>
                       </div>
                     </FormControl>
@@ -178,25 +154,16 @@ export default function SignupPage() {
                 render={({ field }) => (
                   <FormItem className="flex flex-row items-start space-x-2 space-y-0">
                     <FormControl>
-                      <Checkbox
-                        checked={field.value}
-                        onCheckedChange={field.onChange}
-                      />
+                      <Checkbox checked={field.value} onCheckedChange={field.onChange} />
                     </FormControl>
                     <div className="space-y-1 leading-none">
                       <FormLabel className="text-sm font-normal">
                         I agree to the{" "}
-                        <Link
-                          href="/terms"
-                          className="text-gold hover:text-gold/80"
-                        >
+                        <Link href="/terms" className="text-gold hover:text-gold/80">
                           Terms of Service
                         </Link>{" "}
                         and{" "}
-                        <Link
-                          href="/privacy"
-                          className="text-gold hover:text-gold/80"
-                        >
+                        <Link href="/privacy" className="text-gold hover:text-gold/80">
                           Privacy Policy
                         </Link>
                       </FormLabel>
@@ -204,10 +171,7 @@ export default function SignupPage() {
                   </FormItem>
                 )}
               />
-              <Button
-                type="submit"
-                className="w-full bg-gold hover:bg-gold/90 text-gold-foreground"
-              >
+              <Button type="submit" className="w-full bg-gold hover:bg-gold/90 text-gold-foreground">
                 Create Account
               </Button>
             </form>
@@ -216,12 +180,10 @@ export default function SignupPage() {
           <div className="mt-6">
             <div className="relative">
               <div className="absolute inset-0 flex items-center">
-                <div className="w-full border-t border-borderColor"></div>
+                <div className="w-full border-t border-border"></div>
               </div>
               <div className="relative flex justify-center text-xs uppercase">
-                <span className="bg-card px-2 text-muted-foreground">
-                  Or continue with
-                </span>
+                <span className="bg-card px-2 text-muted-foreground">Or continue with</span>
               </div>
             </div>
 
@@ -262,15 +224,13 @@ export default function SignupPage() {
 
           <div className="mt-6 text-center text-sm">
             Already have an account?{" "}
-            <Link
-              href="/auth/login"
-              className="font-medium text-gold hover:text-gold/80"
-            >
+            <Link href="/auth/login" className="font-medium text-gold hover:text-gold/80">
               Sign in
             </Link>
           </div>
         </div>
       </div>
     </Layout>
-  );
+  )
 }
+

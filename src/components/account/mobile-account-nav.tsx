@@ -1,19 +1,10 @@
-"use client";
+"use client"
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import {
-  CreditCard,
-  Heart,
-  LogOut,
-  Menu,
-  Package,
-  Settings,
-  ShoppingBag,
-  User,
-} from "lucide-react";
+import Link from "next/link"
+import { usePathname } from "next/navigation"
+import { CreditCard, Heart, LogOut, Menu, Package, Settings, ShoppingBag, User } from "lucide-react"
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -21,10 +12,10 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+} from "@/components/ui/dropdown-menu"
 
 export function MobileAccountNav() {
-  const pathname = usePathname();
+  const pathname = usePathname()
 
   const menuItems = [
     {
@@ -39,7 +30,7 @@ export function MobileAccountNav() {
     },
     {
       title: "Wishlist",
-      href: "/wishlist",
+      href: "/account/wishlist",
       icon: Heart,
     },
     {
@@ -57,7 +48,7 @@ export function MobileAccountNav() {
       href: "/account/settings",
       icon: Settings,
     },
-  ];
+  ]
 
   return (
     <DropdownMenu>
@@ -74,9 +65,7 @@ export function MobileAccountNav() {
           <DropdownMenuItem key={item.href} asChild>
             <Link
               href={item.href}
-              className={`flex w-full items-center ${
-                pathname === item.href ? "font-medium text-gold" : ""
-              }`}
+              className={`flex w-full items-center ${pathname === item.href ? "font-medium text-gold" : ""}`}
             >
               <item.icon className="mr-2 h-4 w-4" />
               <span>{item.title}</span>
@@ -85,15 +74,13 @@ export function MobileAccountNav() {
         ))}
         <DropdownMenuSeparator />
         <DropdownMenuItem asChild>
-          <Link
-            href="/auth/login"
-            className="flex w-full items-center text-destructive"
-          >
+          <Link href="/auth/login" className="flex w-full items-center text-destructive">
             <LogOut className="mr-2 h-4 w-4" />
             <span>Sign Out</span>
           </Link>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  );
+  )
 }
+

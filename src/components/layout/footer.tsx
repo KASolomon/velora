@@ -1,19 +1,19 @@
-import Link from "next/link";
+import Link from "next/link"
 
 export function Footer() {
   return (
-    <footer className="border-t border-borderColor dark:border-zinc-800 bg-muted/30 dark:bg-zinc-900">
+    <footer className="border-t border-gray-200 dark:border-zinc-800 bg-gray-50/30 dark:bg-zinc-900">
       <div className="container py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-gold">Velora</h3>
-            <p className="text-sm text-muted-foreground dark:text-zinc-400 mb-4">
+            <h3 className="text-lg font-semibold mb-4 text-[#B8860B]">Velora</h3>
+            <p className="text-sm text-gray-500 dark:text-zinc-400 mb-4">
               Premium shopping experience for the discerning customer.
             </p>
             <div className="flex space-x-4">
               <Link
                 href="#"
-                className="text-muted-foreground dark:text-zinc-400 hover:text-gold dark:hover:text-gold"
+                className="text-gray-500 dark:text-zinc-400 hover:text-[#B8860B] dark:hover:text-[#B8860B]"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +32,7 @@ export function Footer() {
               </Link>
               <Link
                 href="#"
-                className="text-muted-foreground dark:text-zinc-400 hover:text-gold dark:hover:text-gold"
+                className="text-gray-500 dark:text-zinc-400 hover:text-[#B8860B] dark:hover:text-[#B8860B]"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +53,7 @@ export function Footer() {
               </Link>
               <Link
                 href="#"
-                className="text-muted-foreground dark:text-zinc-400 hover:text-gold dark:hover:text-gold"
+                className="text-gray-500 dark:text-zinc-400 hover:text-[#B8860B] dark:hover:text-[#B8860B]"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -73,12 +73,12 @@ export function Footer() {
             </div>
           </div>
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-gold">Shop</h3>
+            <h3 className="text-lg font-semibold mb-4 text-[#B8860B]">Shop</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
                   href="/category/groceries"
-                  className="text-muted-foreground dark:text-zinc-400 hover:text-gold dark:hover:text-gold"
+                  className="text-gray-500 dark:text-zinc-400 hover:text-[#B8860B] dark:hover:text-[#B8860B]"
                 >
                   Groceries
                 </Link>
@@ -86,7 +86,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/category/electronics"
-                  className="text-muted-foreground dark:text-zinc-400 hover:text-gold dark:hover:text-gold"
+                  className="text-gray-500 dark:text-zinc-400 hover:text-[#B8860B] dark:hover:text-[#B8860B]"
                 >
                   Electronics
                 </Link>
@@ -94,7 +94,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/category/fashion"
-                  className="text-muted-foreground dark:text-zinc-400 hover:text-gold dark:hover:text-gold"
+                  className="text-gray-500 dark:text-zinc-400 hover:text-[#B8860B] dark:hover:text-[#B8860B]"
                 >
                   Fashion
                 </Link>
@@ -102,7 +102,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/category/home"
-                  className="text-muted-foreground dark:text-zinc-400 hover:text-gold dark:hover:text-gold"
+                  className="text-gray-500 dark:text-zinc-400 hover:text-[#B8860B] dark:hover:text-[#B8860B]"
                 >
                   Home & Kitchen
                 </Link>
@@ -110,7 +110,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/category/beauty"
-                  className="text-muted-foreground dark:text-zinc-400 hover:text-gold dark:hover:text-gold"
+                  className="text-gray-500 dark:text-zinc-400 hover:text-[#B8860B] dark:hover:text-[#B8860B]"
                 >
                   Beauty
                 </Link>
@@ -118,12 +118,12 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-gold">Account</h3>
+            <h3 className="text-lg font-semibold mb-4 text-[#B8860B]">Account</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
                   href="/account"
-                  className="text-muted-foreground dark:text-zinc-400 hover:text-gold dark:hover:text-gold"
+                  className="text-gray-500 dark:text-zinc-400 hover:text-[#B8860B] dark:hover:text-[#B8860B]"
                 >
                   My Account
                 </Link>
@@ -131,15 +131,15 @@ export function Footer() {
               <li>
                 <Link
                   href="/account/orders"
-                  className="text-muted-foreground dark:text-zinc-400 hover:text-gold dark:hover:text-gold"
+                  className="text-gray-500 dark:text-zinc-400 hover:text-[#B8860B] dark:hover:text-[#B8860B]"
                 >
                   Orders
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/wishlist"
-                  className="text-muted-foreground dark:text-zinc-400 hover:text-gold dark:hover:text-gold"
+                  href="/account/wishlist"
+                  className="text-gray-500 dark:text-zinc-400 hover:text-[#B8860B] dark:hover:text-[#B8860B]"
                 >
                   Wishlist
                 </Link>
@@ -147,7 +147,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/gift-cards"
-                  className="text-muted-foreground dark:text-zinc-400 hover:text-gold dark:hover:text-gold"
+                  className="text-gray-500 dark:text-zinc-400 hover:text-[#B8860B] dark:hover:text-[#B8860B]"
                 >
                   Gift Cards
                 </Link>
@@ -155,12 +155,12 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-gold">Support</h3>
+            <h3 className="text-lg font-semibold mb-4 text-[#B8860B]">Support</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
                   href="/contact"
-                  className="text-muted-foreground dark:text-zinc-400 hover:text-gold dark:hover:text-gold"
+                  className="text-gray-500 dark:text-zinc-400 hover:text-[#B8860B] dark:hover:text-[#B8860B]"
                 >
                   Contact Us
                 </Link>
@@ -168,7 +168,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/faq"
-                  className="text-muted-foreground dark:text-zinc-400 hover:text-gold dark:hover:text-gold"
+                  className="text-gray-500 dark:text-zinc-400 hover:text-[#B8860B] dark:hover:text-[#B8860B]"
                 >
                   FAQs
                 </Link>
@@ -176,7 +176,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/shipping"
-                  className="text-muted-foreground dark:text-zinc-400 hover:text-gold dark:hover:text-gold"
+                  className="text-gray-500 dark:text-zinc-400 hover:text-[#B8860B] dark:hover:text-[#B8860B]"
                 >
                   Shipping & Returns
                 </Link>
@@ -184,7 +184,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/privacy"
-                  className="text-muted-foreground dark:text-zinc-400 hover:text-gold dark:hover:text-gold"
+                  className="text-gray-500 dark:text-zinc-400 hover:text-[#B8860B] dark:hover:text-[#B8860B]"
                 >
                   Privacy Policy
                 </Link>
@@ -192,7 +192,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/terms"
-                  className="text-muted-foreground dark:text-zinc-400 hover:text-gold dark:hover:text-gold"
+                  className="text-gray-500 dark:text-zinc-400 hover:text-[#B8860B] dark:hover:text-[#B8860B]"
                 >
                   Terms of Service
                 </Link>
@@ -200,10 +200,11 @@ export function Footer() {
             </ul>
           </div>
         </div>
-        <div className="mt-12 pt-8 border-t border-borderColor dark:border-zinc-800 text-center text-sm text-muted-foreground dark:text-zinc-400">
+        <div className="mt-12 pt-8 border-t border-gray-200 dark:border-zinc-800 text-center text-sm text-gray-500 dark:text-zinc-400">
           <p>© {new Date().getFullYear()} Velora. All rights reserved.</p>
         </div>
       </div>
     </footer>
-  );
+  )
 }
+

@@ -26,8 +26,8 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
               <ChevronRight className="h-4 w-4 mx-1" />
               <span>{categoryName}</span>
             </div>
-            <h1 className="text-3xl font-bold tracking-tight text-secondary">
-              {categoryName} <span className="text-gold">Collection</span>
+            <h1 className="text-3xl font-bold tracking-tight text-gold">
+              {categoryName} <span className=" text-secondary-foreground" >Collection</span>
             </h1>
             <p className="text-muted-foreground">
               Discover our premium selection of {categoryName.toLowerCase()} products, crafted for excellence and

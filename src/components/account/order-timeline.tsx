@@ -29,7 +29,7 @@ export function OrderTimeline({ events }: OrderTimelineProps) {
 
   return (
     <div className="space-y-4">
-      <h3 className="font-medium text-lg text-gold">Order Timeline</h3>
+      <h3 className="font-medium text-lg text-[#B8860B]">Order Timeline</h3>
       <div className="space-y-4">
         {sortedEvents.map((event, index) => (
           <div key={index} className="flex gap-4">
@@ -37,15 +37,15 @@ export function OrderTimeline({ events }: OrderTimelineProps) {
               className={cn(
                 "flex h-10 w-10 shrink-0 items-center justify-center rounded-full",
                 index === 0
-                  ? "bg-gold text-gold-foreground"
-                  : "bg-muted dark:bg-zinc-800 text-muted-foreground dark:text-zinc-400",
+                  ? "bg-[#B8860B] text-white"
+                  : "bg-gray-100 dark:bg-zinc-800 text-gray-500 dark:text-zinc-400",
               )}
             >
               {getIcon(event.type)}
             </div>
             <div className="space-y-1">
               <p className="font-medium">{event.title}</p>
-              <p className="text-sm text-muted-foreground dark:text-zinc-400">
+              <p className="text-sm text-gray-500 dark:text-zinc-400">
                 {format(new Date(event.date), "MMMM d, yyyy 'at' h:mm a")}
               </p>
               {event.description && <p className="text-sm">{event.description}</p>}

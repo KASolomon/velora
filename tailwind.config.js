@@ -1,7 +1,11 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
-  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
+  content: [
+    "./src/pages/**/*.{ts,tsx}",
+    "./src/components/**/*.{ts,tsx}",
+    "./src/app/**/*.{ts,tsx}",
+    "*.{js,ts,jsx,tsx,mdx}",
+  ],
   theme: {
     container: {
       center: true,
@@ -59,10 +63,8 @@ module.exports = {
       },
       boxShadow: {
         "gold-sm": "0 1px 2px 0 rgba(184, 134, 11, 0.05)",
-        "gold-md":
-          "0 4px 6px -1px rgba(184, 134, 11, 0.1), 0 2px 4px -1px rgba(184, 134, 11, 0.06)",
-        "gold-lg":
-          "0 10px 15px -3px rgba(184, 134, 11, 0.1), 0 4px 6px -2px rgba(184, 134, 11, 0.05)",
+        "gold-md": "0 4px 6px -1px rgba(184, 134, 11, 0.1), 0 2px 4px -1px rgba(184, 134, 11, 0.06)",
+        "gold-lg": "0 10px 15px -3px rgba(184, 134, 11, 0.1), 0 4px 6px -2px rgba(184, 134, 11, 0.05)",
       },
       keyframes: {
         "accordion-down": {
@@ -112,4 +114,5 @@ module.exports = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-};
+}
+

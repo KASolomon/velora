@@ -1,27 +1,20 @@
-"use client";
+"use client"
 
-import { useState } from "react";
-import Link from "next/link";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { Eye, EyeOff } from "lucide-react";
+import { useState } from "react"
+import Link from "next/link"
+import { zodResolver } from "@hookform/resolvers/zod"
+import { useForm } from "react-hook-form"
+import { Eye, EyeOff } from "lucide-react"
 
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Checkbox } from "@/components/ui/checkbox";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
-import { Layout } from "@/components/layout/layout";
-import { loginFormSchema, type LoginFormValues } from "@/lib/validations/auth";
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Checkbox } from "@/components/ui/checkbox"
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
+import { Layout } from "@/components/layout/layout"
+import { loginFormSchema, type LoginFormValues } from "@/lib/validations/auth"
 
 export default function LoginPage() {
-  const [showPassword, setShowPassword] = useState(false);
+  const [showPassword, setShowPassword] = useState(false)
 
   const form = useForm<LoginFormValues>({
     resolver: zodResolver(loginFormSchema),
@@ -30,10 +23,10 @@ export default function LoginPage() {
       password: "",
       rememberMe: false,
     },
-  });
+  })
 
   function onSubmit(data: LoginFormValues) {
-    console.log(data);
+    console.log(data)
     // Here you would typically authenticate the user
   }
 
@@ -42,12 +35,10 @@ export default function LoginPage() {
       <div className="container py-16 max-w-md mx-auto">
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold">Welcome Back</h1>
-          <p className="text-muted-foreground mt-2">
-            Sign in to your Velora account
-          </p>
+          <p className="text-muted-foreground mt-2">Sign in to your Velora account</p>
         </div>
 
-        <div className="rounded-lg border bg-card p-6 shadow-xs">
+        <div className="rounded-lg border bg-card p-6 shadow-sm">
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
               <FormField
@@ -71,11 +62,7 @@ export default function LoginPage() {
                     <FormLabel>Password</FormLabel>
                     <FormControl>
                       <div className="relative">
-                        <Input
-                          type={showPassword ? "text" : "password"}
-                          placeholder="Enter your password"
-                          {...field}
-                        />
+                        <Input type={showPassword ? "text" : "password"} placeholder="Enter your password" {...field} />
                         <Button
                           type="button"
                           variant="ghost"
@@ -88,9 +75,7 @@ export default function LoginPage() {
                           ) : (
                             <Eye className="h-4 w-4 text-muted-foreground" />
                           )}
-                          <span className="sr-only">
-                            {showPassword ? "Hide password" : "Show password"}
-                          </span>
+                          <span className="sr-only">{showPassword ? "Hide password" : "Show password"}</span>
                         </Button>
                       </div>
                     </FormControl>
@@ -105,30 +90,19 @@ export default function LoginPage() {
                   render={({ field }) => (
                     <FormItem className="flex flex-row items-start space-x-2 space-y-0">
                       <FormControl>
-                        <Checkbox
-                          checked={field.value}
-                          onCheckedChange={field.onChange}
-                        />
+                        <Checkbox checked={field.value} onCheckedChange={field.onChange} />
                       </FormControl>
                       <div className="space-y-1 leading-none">
-                        <FormLabel className="text-sm font-normal">
-                          Remember me
-                        </FormLabel>
+                        <FormLabel className="text-sm font-normal">Remember me</FormLabel>
                       </div>
                     </FormItem>
                   )}
                 />
-                <Link
-                  href="/auth/forgot-password"
-                  className="text-sm font-medium text-gold hover:text-gold/80"
-                >
+                <Link href="/auth/forgot-password" className="text-sm font-medium text-gold hover:text-gold/80">
                   Forgot password?
                 </Link>
               </div>
-              <Button
-                type="submit"
-                className="w-full bg-gold hover:bg-gold/90 text-gold-foreground"
-              >
+              <Button type="submit" className="w-full bg-gold hover:bg-gold/90 text-gold-foreground">
                 Sign In
               </Button>
             </form>
@@ -137,12 +111,10 @@ export default function LoginPage() {
           <div className="mt-6">
             <div className="relative">
               <div className="absolute inset-0 flex items-center">
-                <div className="w-full border-t border-borderColor"></div>
+                <div className="w-full border-t border-border"></div>
               </div>
               <div className="relative flex justify-center text-xs uppercase">
-                <span className="bg-card px-2 text-muted-foreground">
-                  Or continue with
-                </span>
+                <span className="bg-card px-2 text-muted-foreground">Or continue with</span>
               </div>
             </div>
 
@@ -183,15 +155,13 @@ export default function LoginPage() {
 
           <div className="mt-6 text-center text-sm">
             Don't have an account?{" "}
-            <Link
-              href="/auth/signup"
-              className="font-medium text-gold hover:text-gold/80"
-            >
+            <Link href="/auth/signup" className="font-medium text-gold hover:text-gold/80">
               Sign up
             </Link>
           </div>
         </div>
       </div>
     </Layout>
-  );
+  )
 }
+
